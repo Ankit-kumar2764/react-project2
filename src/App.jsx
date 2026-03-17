@@ -1,12 +1,14 @@
-import React from "react";
+import {useState } from "react";
 function App() {
     //creating state
-    const [count, setCount] = React.useState(0);
+    const [name, setName] = useState("rahul");
+    const [age, setAge] = useState(25);
     return (
         <div>
-            <h1>Counter : {count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
+            <h2>Name : {name}</h2>
+            <h2>Age : {age}</h2>
+            <button onClick={() => setName("rohit")}>Change Name</button>
+            <button onClick={() => setAge(age+1)}>Increase Age</button>
         </div>
     );
 }
